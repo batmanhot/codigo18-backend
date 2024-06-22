@@ -1,0 +1,32 @@
+// Vamos a usar postgress | mysql | sqllite
+
+Table tasks {
+  id integer [primary key]
+  title varchar
+  description varchar
+  status varchar
+  color varchar
+  user_id integer [ref : > users.id]
+  category_id integer [ref: > categories.id]
+  created_at datetime
+  updated_at datetime
+}
+
+Table users {
+  id integer [primary key]
+  name varchar
+  lastname varchar
+  email varchar
+  password varchar
+  is_superuser bool
+  created_at datetime
+  updated_at datetime
+}
+
+Table categories {
+  id integer [primary key]
+  title varchar
+  description varchar
+  created_at datetime
+  updated_at datetime
+}
