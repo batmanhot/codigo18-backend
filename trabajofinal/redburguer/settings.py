@@ -92,22 +92,20 @@ WSGI_APPLICATION = 'redburguer.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {                
-        'ENGINE': os.environ("ENGINE"),
-        'NAME': os.environ("NAME"),
-        'USER': os.environ("USER"),
-        'PASSWORD': os.environ("PASSWORD"),
-        'HOST': os.environ("HOST")        
+    'default': {                        
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tienda_redburguer',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-        # valores antiguos de la bd
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'tienda_redburguer',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'root',
-        # 'HOST': 'localhost',
-        # 'PORT': '5432',
-
+        # 'ENGINE': os.environ("ENGINE"),
+        # 'NAME': os.environ("NAME"),
+        # 'USER': os.environ("USER"),
+        # 'PASSWORD': os.environ("PASSWORD"),
+        # 'HOST': os.environ("HOST")        
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
