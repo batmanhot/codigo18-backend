@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhitenoiseMiddleware',    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware'
+    
 ]
 
 # Aqui va el puerto del FontEnd que hara uso del api
@@ -190,6 +192,7 @@ JAZZMIN_SETTINGS = {
 
 STATIC_ROOT = BASE_DIR/'static'
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # SIMPLE_JWT = {
 #     "ACCESS_TOKEN_LIFETIME": timedelta(weeks=4)  # days=365*100 => 100 años
